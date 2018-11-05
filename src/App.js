@@ -9,6 +9,7 @@ import FoodListContainer from './containers/FoodListContainer';
 class App extends Component {
   state = {
   foods: []
+
   }
 
   componentDidMount() {
