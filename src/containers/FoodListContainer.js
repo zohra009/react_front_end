@@ -6,7 +6,8 @@ import ShowPage from '../components/ShowPage'
 class FoodListContainer extends Component {
   state = {
     selected: false,
-    showFood: null
+    showFood: null,
+
   }
 
   clickImageHandler = (e) => {
@@ -17,9 +18,13 @@ class FoodListContainer extends Component {
     })
   }
 
+  backToAllFood = () => {
+    this.setState({selected: false})
+  }
+
   foodArray = () => {
-    const foodsArr = this.props.foods.map(food => <FoodItem key={food.name} food={food} value={this.state.showFood} clickImageHandler={this.clickImageHandler} />)
-    return this.state.selected ? <ShowPage showFood={this.state.showFood}/> : foodsArr
+    const foodsArr = this.props.foods.map(food => <FoodItem key={food.name} food={food} value={this.state.showFood} clickHandler={this.clickImageHandler} switchToViewAll={this.props.switchToViewAll}/>)
+    return this.state.selected ? <ShowPage showFood={this.state.showFood} backToAllFood={this.backToAllFood} addHandler={this.props.addHandler}/> : foodsArr
 
   }
 
@@ -28,7 +33,8 @@ class FoodListContainer extends Component {
       <div>
         You're in your Food List Container
 
-        <div id="categorybar">
+
+        <div id="categorybar"><br/>
           <span>Image</span>
           <span>Restaurant Name</span>
           <span>Location</span>

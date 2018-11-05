@@ -2,7 +2,8 @@ import React from 'react'
 // import from './FoodItem'
 
 
-const ShowPage = ({showFood}) => {
+const ShowPage = ({showFood, addHandler, backToAllFood}) => {
+  console.log(addHandler);
   // displayMap = () => {
   //     // Instantiate a map and platform object:
   //   let platform = new H.service.Platform({
@@ -58,7 +59,7 @@ const ShowPage = ({showFood}) => {
 
   return (
     <div>
-    
+
       <img className="img" src={showFood.image_url} />
     <p>Restaurant Name: {showFood.name}</p>
 
@@ -67,6 +68,9 @@ const ShowPage = ({showFood}) => {
       <p>{showFood.price}</p>
       <p>{showFood.location}</p>
       <p>{showFood.phone}</p>
+      <button onClick={() => addHandler(showFood)}>Add to Favorites</button>
+      <button onClick={backToAllFood}>Back to Food List</button>
+
     </div>
 
   )
