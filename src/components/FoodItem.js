@@ -1,18 +1,19 @@
 import React from 'react'
 import "./FoodItem.css"
 
+
 const FoodItem = ({food, clickImageHandler}) => {
   return (
-    <figure onClick={clickImageHandler}>
+    <div onClick={() => clickImageHandler(food)}>
       <img className="img" src={food.image_url} />
-    <figcaption >Restaurant Name: {food.name}</figcaption>
+    <p >Restaurant Name: {food.name}</p>
       {/*// <td>{food.is_closed}</td>
       // <td>{food.categories}</td>
       // <td>{food.rating}</td>
       // <td>{food.price}</td>
       // <td>{food.location}</td>
       // <td>{food.phone}</td> */}
-    </figure>
+    </div>
 
   )
 }
