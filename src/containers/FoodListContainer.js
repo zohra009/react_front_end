@@ -23,22 +23,24 @@ class FoodListContainer extends Component {
   }
 
   foodArray = () => {
-    const foodsArr = this.props.foods.map(food => <FoodItem key={food.name} food={food} value={this.state.showFood} clickHandler={this.clickImageHandler} switchToViewAll={this.props.switchToViewAll}/>)
-    return this.state.selected ? <ShowPage showFood={this.state.showFood} backToAllFood={this.backToAllFood} addHandler={this.props.addHandler}/> : foodsArr
+    const foodsArr = this.props.foods.map(food => {
+      console.log(food);
+      return <FoodItem key={food.name} food={food} value={this.state.showFood} clickHandler={this.clickImageHandler} switchToViewAll={this.props.switchToViewAll}/>
+    })
+
+    return this.state.selected ? <ShowPage showFood={this.state.showFood} visible={this.props.visible} backToAllFood={this.backToAllFood} addHandler={this.props.addHandler}/> : foodsArr
 
   }
 
   render() {
+
     return (
       <div>
-        You're in your Food List Container
+
 
 
         <div id="categorybar"><br/>
-          <span>Image</span>
-          <span>Restaurant Name</span>
-          <span>Location</span>
-          <span>Open</span>
+
         </div>
         {this.foodArray()}
       </div>
