@@ -70,7 +70,7 @@ class FoodPage extends Component {
           <NavBar />
               <Switch>
 
-                <Route exact path="/favorites" render={() => <FavoritesContainer foods={this.state.userFavFoods}/>} > Favorite Food Item </Route>
+                <Route exact path="/favorites" render={() => <FavoritesContainer foods={this.state.userFavFoods} removeHandler={this.removeHandler}/>} > Favorite Food Item </Route>
                 <Route exact path="/food" component={ShowPage}> Show Food Page </Route>
                 <Route path="/" render={() => <FoodListContainer foods={this.state.foods}/>} > Food List </Route>
 
