@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import FoodListContainer from './containers/FoodListContainer';
-import FavoritesContainer from './containers/FavoritesContainer'
-// import ShowPage from './components/ShowPage'
-// import FoodItem from './components/FoodItem'
+import FavoritesContainer from './containers/FavoritesContainer';
+import NavBar  from './NavBar';
+import ShowPage from './components/ShowPage';
+import FoodItem from './components/FoodItem';
 // import FavFoodItem from './components/FavFoodItem'
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 class FoodPage extends Component {
@@ -57,12 +58,28 @@ class FoodPage extends Component {
 
   }
 
+
+
   render() {
 
     return (
       <div className="FoodPage">
+        <Router>
 
-      <FavoritesContainer foods={this.state.userFavFoods} backToAllFood={this.backToAllFood} removeHandler={this.removeHandler}/>
+          <div>
+          <NavBar />
+              <Switch>
+
+                <Route exact path="/favorites" render={() => <FavoritesContainer foods={this.state.userFavFoods}/>} > Favorite Food Item </Route>
+                <Route exact path="/food" component={ShowPage}> Show Food Page </Route>
+                <Route path="/" render={() => <FoodListContainer foods={this.state.foods}/>} > Food List </Route>
+
+
+              </Switch>
+          </div>
+      </Router>
+
+
       <FoodListContainer visible={this.state.visible} foods={this.state.foods} backToAllFood={this.backToAllFood} switchToViewAll={this.switchToViewAll} addHandler={this.addHandler}/>
       </div>
     );

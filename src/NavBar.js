@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, NavLink, Link } from 'react-router-dom';
 import { Input, Menu } from 'semantic-ui-react'
 import React, { Fragment, Component } from 'react';
 
@@ -11,13 +11,13 @@ class NavBar extends Component {
 
     render() {
       // const { activeItem } = this.state
-
+      console.log(this.props)
       return (
         <header>
           <h1>DrunkFoodz</h1>
 
-              <NavLink exact to="/">Homepage|   </NavLink>
-              <NavLink to="/favorites"> Favorite Food Item|   </NavLink>
+              <Link to="/">Homepage|   </Link>
+              <Link to="/favorites"> Favorite Food Item|   </Link>
 
 
 
