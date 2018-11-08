@@ -7,7 +7,7 @@ const MyGoogleMap = withScriptjs(withGoogleMap((props) =>
    defaultZoom={8}
    defaultCenter={{ lat: parseFloat(props.food.latitude), lng: parseFloat(props.food.longitude) }}
  >
-   {props.isMarkerShown && <Marker position={{ lat:  parseFloat(props.food.latitude), lng: parseFloat(props.food.longitude) }} />}
+   {props.isMarkerShown && <Marker position={{ lat:  parseFloat(props.food.latitude), lng: parseFloat (props.food.longitude) }} />}
  </GoogleMap>
 ))
  export default MyGoogleMap;
