@@ -6,6 +6,7 @@ import ShowPage from './components/ShowPage';
 import FoodItem from './components/FoodItem';
 // import FavFoodItem from './components/FavFoodItem'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MyGoogleMap from './containers/MyGoogleMap'
 
 
 class FoodPage extends Component {
@@ -61,7 +62,7 @@ class FoodPage extends Component {
 
 
   render() {
-
+    console.log(this.state.foods)
     return (
       <div className="FoodPage">
         <Router>
@@ -79,8 +80,9 @@ class FoodPage extends Component {
           </div>
       </Router>
 
-
       <FoodListContainer visible={this.state.visible} foods={this.state.foods} backToAllFood={this.backToAllFood} switchToViewAll={this.switchToViewAll} addHandler={this.addHandler}/>
+
+      
       </div>
     );
   }
