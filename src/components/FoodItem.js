@@ -3,7 +3,7 @@ import "./FoodItem.css"
 // import {NavLink} from 'react-router-dom'
 
 
-const FoodItem = ({food, clickHandler}) => {console.log(food)
+const FoodItem = ({food, clickHandler}) => {
   return (
     <div onClick={() => clickHandler(food)}>
 

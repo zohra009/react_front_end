@@ -1,13 +1,22 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 
-class Filter extends Component {
+const Filter = ({ handleRadio, sortBy }) => {
+  return (
+    <Fragment>
+    <strong>Sort by:</strong>
+      <label>
+        <input type="radio" name='name' value="Categories" checked={sortBy === "Categories"} onChange={(event) => handleRadio(event)}/>
+        Categories
+      </label>
+      <label>
+        <input type="radio" name='name' value="Rating" checked={sortBy === "Rating"} onChange={(event) => handleRadio(event)}/>
+        Rating
+      </label>
+      <br/>
 
-  render() {
-    return (
-      <div></div>
-    );
-  }
 
+    </Fragment>
+  )
 }
 
-export default Filter;
+export default Filter
