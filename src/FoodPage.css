@@ -1,10 +1,19 @@
-.FoodPage-header {
-  background-image: #7eb8ac;
+.FoodPage {
+  background-image: url("https://tunefly.com/wp-content/uploads/2016/05/tunefly-color-background.gif");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: midnightblue;
 }
+.LogIn{
+  background-image: url("https://i.pinimg.com/originals/10/ff/38/10ff38e1fb344dec9d4bafc6c45e88f4.gif")
+}
+
+/* bakc gorund color changed every few secs https://tunefly.com/wp-content/uploads/2016/05/tunefly-color-background.gif */
+/* food emoji gif transparent https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1XUHUg-_lGBb8RjdHBAZvFHUvpMLHXJNiETTe0PVadk4heg_B */
+
+
+/* https://i.pinimg.com/originals/10/ff/38/10ff38e1fb344dec9d4bafc6c45e88f4.gif */

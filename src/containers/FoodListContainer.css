@@ -7,3 +7,7 @@
 #categorybar span{
   margin-left: 10px;
 }
+div.ui.relaxed.three.column.grid {
+  position: relative;
+  top: 15px;
+}

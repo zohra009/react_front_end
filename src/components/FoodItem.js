@@ -1,18 +1,20 @@
 import React from 'react'
 import "./FoodItem.css"
+import { Card, Icon, Image } from 'semantic-ui-react'
 
-// import {NavLink} from 'react-router-dom'
 
 
 const FoodItem = ({food, clickHandler}) => {
   return (
-    <div onClick={() => clickHandler(food)}>
+    <Card className="card">
+      <div onClick={() => clickHandler(food)}>
 
-    <img className="img" src={food.image_url} />
-    <p >Restaurant Name: {food.name}</p>
-
-    </div>
-
+        <img className="img" src={food.image_url} />
+        <Card.Content>
+        <p >{food.name}</p>
+         </Card.Content>
+      </div>
+    </Card>
   )
 }
 export default FoodItem;
