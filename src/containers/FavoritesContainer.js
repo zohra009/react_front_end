@@ -1,5 +1,6 @@
 import React from 'react'
 import FavFoodItem from '../components/FavFoodItem'
+// import Filter from './Filter'
 
 const FavoritesContainer = ({foods, removeHandler}) => {
 
@@ -10,6 +11,7 @@ const FavoritesContainer = ({foods, removeHandler}) => {
   }
   return (
       <div>
+
         Users Favorite Foods !
         {foodsArr}
       </div>

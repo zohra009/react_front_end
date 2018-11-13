@@ -1,16 +1,19 @@
 import React, { Fragment, Component } from 'react';
 
-const Filter = ({ handleRadio, sortBy }) => {
+const Filter = ({ handleRadio }) => {
   return (
+
     <Fragment>
     <strong>Sort by:</strong>
       <label>
-        <input type="radio" name='name' value="Categories" checked={sortBy === "Categories"} onChange={(event) => handleRadio(event)}/>
+        <button type="button" name='name' value="Categories"  onClick={(event) => handleRadio(event)}>
         Categories
+        </button>
       </label>
       <label>
-        <input type="radio" name='name' value="Rating" checked={sortBy === "Rating"} onChange={(event) => handleRadio(event)}/>
+        <button type="button" name='name' value="Rating" onClick={(event) => handleRadio(event)}>
         Rating
+        </button>
       </label>
       <br/>
 

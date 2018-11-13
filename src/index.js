@@ -19,9 +19,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
-  
+  <Router>
   <FoodPage />
-
+  </Router>
   ,document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
