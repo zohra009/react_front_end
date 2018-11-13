@@ -1,29 +1,32 @@
 /* image class with second parameter being img tag in FoodItem components */
 .img {
-  width: 252px;
-  height: 150px;
+  width: 240px;
+  height: 130px;
 
   border: 1px solid mediumaquamarine;
 }
-/* .img:hover {
+.img:hover {
     background-color: yellow;
     color: white;
     box-shadow: 4px 4px 4px black, 0 0 38px midnightblue, 0 0 5px mediumaquamarine;
 
-} */
+}
 
 p {
   font-size:16px;
    font-family: "Lucida Sans Unicode", 'Lucida Grande', sans-serif;
    text-shadow: .2px .2px 2px white, 0 0 20px mediumaquamarine, 0 0 5px palevioletred;
 }
-.card {
-  width: 220px;
-  height: 150px;
+.ui.card.card {
+  background-color: sandybrown;
+  width: 200px;
+  height: 169px;
+  position: relative;
+  top: 25px;
 }
-.card:hover {
-
-  border: 1px solid mediumaquamarine;
+.ui.card.card:hover {
+  background-color: yellow;
+  border: 1px  mediumaquamarine;
   color: white;
   box-shadow: 4px 4px 4px black, 0 0 38px midnightblue, 0 0 5px mediumaquamarine;
 }

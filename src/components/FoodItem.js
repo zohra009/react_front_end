@@ -6,14 +6,13 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 
 const FoodItem = ({food, clickHandler}) => {
   return (
-    <Card className="card">
-      <div onClick={() => clickHandler(food)}>
+    <Card className="card" onClick={() => clickHandler(food)}>
 
         <img className="img" src={food.image_url} />
-        <Card.Content>
-        <p >{food.name}</p>
-         </Card.Content>
-      </div>
+        
+        <p >{food.name}</p><br/>
+
+
     </Card>
   )
 }
