@@ -1,13 +1,25 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 
-class Filter extends Component {
+const Filter = ({ handleRadio }) => {
+  return (
 
-  render() {
-    return (
-      <div></div>
-    );
-  }
+    <Fragment>
+    <strong>Sort by:</strong>
+      <label>
+        <button type="button" name='name' value="Categories"  onClick={(event) => handleRadio(event)}>
+        Categories
+        </button>
+      </label>
+      <label>
+        <button type="button" name='name' value="Rating" onClick={(event) => handleRadio(event)}>
+        Rating
+        </button>
+      </label>
+      <br/>
 
+
+    </Fragment>
+  )
 }
 
-export default Filter;
+export default Filter
