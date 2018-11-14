@@ -1,6 +1,6 @@
 .filter {
-  position: absolute;
-  top: 77px;
+  position: relative;
+  top: -8px;
   margin-left: 5px;
 
 }
