@@ -2,8 +2,9 @@
 import React, { Fragment, Component } from 'react';
 import MyGoogleMap from '../containers/MyGoogleMap';
 import keys from '../keys'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Icon, Image, Rating } from 'semantic-ui-react'
 import {withRouter} from 'react-router-dom'
+import './ShowPage.css'
 // import StarRating from "./StarRating"
 
 class ShowPage extends Component {
@@ -23,19 +24,31 @@ class ShowPage extends Component {
    this.props.addHandler(this.state.showFood)
   }
 
+  //rating Star
+
+  ratingStar = () => {
+    const rating = parseInt(this.state.showFood.rating)
+    let stars = []
+    for(let i = 0; i < rating; i++) {
+       stars.push(<img src='/star-transparent.png'/>)
+    }
+    return stars
+  }
+
   render() {
-    console.log(this.state.showFood);
+    console.log(parseInt(this.state.showFood.rating).toString());
     const mapURL = `https://maps.googleapis.com/maps/api/js?key=${keys.API_KEY}&v=3.exp&libraries=geometry,drawing,places`
     return (
 
       <Fragment>
-     <div>
+
 
       <img className="img" src={this.state.showFood.image_url} />
       <p>Restaurant Name: {this.state.showFood.name}</p>
 
       <p>{this.state.showFood.categories}</p>
       <p>{this.state.showFood.rating}</p>
+          <div id='rating'>{this.ratingStar()}</div>
       <p>{this.state.showFood.price}</p>
       <p>{this.state.showFood.location}</p>
       <p>{this.state.showFood.phone}</p>
@@ -51,10 +64,13 @@ class ShowPage extends Component {
            food={this.state.showFood}
           />
 
-    </div>
+
   </Fragment>
   )
   }
 }
 
 export default withRouter(ShowPage);
+
+
+// <Rating icon='star' defaultRating={parseInt(this.state.showFood.rating).toString()} maxRating={5}/>

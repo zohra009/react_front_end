@@ -1,5 +1,9 @@
 .filter {
   position: absolute;
-  top: 50px;
+  top: 77px;
+  margin-left: 5px;
 
+}
+.ui.button {
+  margin-right: 7px;
 }
