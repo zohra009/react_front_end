@@ -1,8 +1,9 @@
-import React, { Component, Link } from 'react';
+import React, { Component } from 'react';
 import FoodItem from '../components/FoodItem'
 import "./FoodListContainer.css"
 import { Grid, Image } from 'semantic-ui-react'
 import ShowPage from '../components/ShowPage'
+import { BrowserRouter as Router, Route, Switch, Link, withRouter} from 'react-router-dom';
 
 import Filter from './Filter'
 
@@ -21,6 +22,7 @@ class FoodListContainer extends Component {
       selected: true,
       showFood: e,
     })
+    this.props.history.push(`/food/${e.id}`)
 
   }
 
@@ -65,6 +67,8 @@ class FoodListContainer extends Component {
         clickHandler={this.clickImageHandler} switchToViewAll={this.props.switchToViewAll} /></Grid.Column>
     })
 
+    // debugger
+
     return this.state.selected ? <ShowPage showFood={this.state.showFood}
     visible={this.props.visible} backToAllFood={this.backToAllFood}
     addHandler={this.props.addHandler} onClick={this.props.setId}/> : foodsArr
@@ -86,4 +90,4 @@ class FoodListContainer extends Component {
 
 }
 
-export default FoodListContainer;
+export default withRouter(FoodListContainer);
