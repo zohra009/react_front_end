@@ -5,6 +5,7 @@ import keys from '../keys'
 import { Card, Icon, Image, Rating } from 'semantic-ui-react'
 import {withRouter} from 'react-router-dom'
 import './ShowPage.css'
+import { Button, Modal } from 'semantic-ui-react'
 // import StarRating from "./StarRating"
 
 class ShowPage extends Component {
@@ -43,27 +44,34 @@ class ShowPage extends Component {
       <Fragment>
 
 
-      <img className="img" src={this.state.showFood.image_url} />
+      <img className="show-img" src={this.state.showFood.image_url} />
       <p>Restaurant Name: {this.state.showFood.name}</p>
 
-      <p>{this.state.showFood.categories}</p>
-      <p>{this.state.showFood.rating}</p>
-          <div id='rating'>{this.ratingStar()}</div>
-      <p>{this.state.showFood.price}</p>
-      <p>{this.state.showFood.location}</p>
-      <p>{this.state.showFood.phone}</p>
-      <button onClick={() => this.toggle()}>Add to Favorites</button>
-      <button onClick={this.props.backToAllFood}>Back to Food List</button>
+      <p>Categories: {this.state.showFood.categories}</p>
+      <p>Rating:<div id='rating'>{this.ratingStar()}</div></p>
 
+      <p>Price: {this.state.showFood.price}</p>
+      <p>Location: {this.state.showFood.location}</p>
+      <p>Tel: {this.state.showFood.phone}</p>
+      <Modal style={{width: 300}} trigger={<Button onClick={() => this.toggle()}> Add to Favorites</Button>}>
+        <Modal.Content style={{"background-color": "aquamarine"}}>
+
+          <p>Added to Your Favorites!</p>
+
+        </Modal.Content >
+
+      </Modal>
+
+      <div className="map">
         <MyGoogleMap
            isMarkerShown
            googleMapURL= {mapURL}
-           loadingElement={<div style={{ height: `50%` }} />}
-           containerElement={<div style={{ height: `200px` }} />}
+           loadingElement={<div style={{ height: `60%` }} />}
+           containerElement={<div style={{ height: `250px` }} />}
            mapElement={<div style={{ height: `100%` }} />}
            food={this.state.showFood}
           />
-
+      </div>
 
   </Fragment>
   )
@@ -72,5 +80,6 @@ class ShowPage extends Component {
 
 export default withRouter(ShowPage);
 
+//<Button onClick={this.props.backToAllFood}>Back to Food List</Button>
 
 // <Rating icon='star' defaultRating={parseInt(this.state.showFood.rating).toString()} maxRating={5}/>

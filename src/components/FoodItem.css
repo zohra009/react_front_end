@@ -1,8 +1,8 @@
 /* image class with second parameter being img tag in FoodItem components */
 .img {
-  width: 232px;
+  width: 239px;
   height: 130px;
-
+  /* margin-left: 63px; */
   border: 1px solid burlywood;
 }
 .img:hover {
@@ -28,6 +28,7 @@ p {
   height: 165px;
   position: relative;
   border: 3px  peachpuff;
+  margin-left: 34px;
   /* top: 80px; */
 }
 .ui.card.card:hover {

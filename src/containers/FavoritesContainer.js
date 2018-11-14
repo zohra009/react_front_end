@@ -13,17 +13,18 @@ class FavoritesContainer extends React.Component {
     })
   }
   componentDidUpdate(prevProps, prevState) {
-    // console.log(this.state.favFoods, 'prevProps:', prevProps, 'this.props.foods:', this.props.foods);
+    console.log(this.state.favFoods, 'prevProps:', prevProps, 'this.props.foods:', this.props.foods);
     if(prevProps.foods !== this.props.foods){
       this.setState({favFoods: this.props.foods})
     }
   }
 
   handleRadio = (event) => {
-    //console.log(event.target.value);
+    // console.log("Vadim");
     //event.preventDefault()
     // console.log('im in handleRadio' ,event.target.value);
     let newArr = [...this.state.favFoods]
+    // console.log(event.target.value);
     if(event.target.value === "Categories"){
 
      // console.log('I hit categories!');
@@ -38,7 +39,7 @@ class FavoritesContainer extends React.Component {
     let foodArr = 'you have no favs'
     //console.log(this.state.favFoods)
     if (this.state.favFoods.length > 0) {
-      return foodArr = this.props.foods.map(food => <FavFoodItem key={food.name} food={food} clickHandler={this.props.removeHandler}  />)
+      return foodArr = this.state.favFoods.map(food => <FavFoodItem key={food.id} food={food} clickHandler={this.props.removeHandler}  />)
     }
   }
   render(){
