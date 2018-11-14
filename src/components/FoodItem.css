@@ -8,25 +8,29 @@
 .img:hover {
     background-color: yellow;
     color: white;
-    box-shadow: 4px 4px 4px black, 0 0 38px midnightblue, 0 0 5px mediumaquamarine;
+    box-shadow: 6px 6px 6px black, 0 0 38px midnightblue, 0 0 5px mediumaquamarine;
 
 }
 
 p {
-  font-size:16px;
+  font-size:14px;
    font-family: "Lucida Sans Unicode", 'Lucida Grande', sans-serif;
-   text-shadow: .2px .2px 2px white, 0 0 20px mediumaquamarine, 0 0 5px palevioletred;
+   text-shadow: .1px .1px 1px white, 0 0 15px mediumaquamarine, 0 0 5px palevioletred;
+   position: relative;
+   top: 3px;
+   word-wrap: break-word;
+   font-weight: 900;
 }
 .ui.card.card {
   background-color: sandybrown;
-  width: 200px;
+  width: 210px;
   height: 169px;
   position: relative;
-  top: 25px;
+  top: 30px;
 }
 .ui.card.card:hover {
   background-color: yellow;
   border: 1px  mediumaquamarine;
-  color: white;
+  color: brown;
   box-shadow: 4px 4px 4px black, 0 0 38px midnightblue, 0 0 5px mediumaquamarine;
 }

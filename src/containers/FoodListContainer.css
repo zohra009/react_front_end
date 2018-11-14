@@ -1,12 +1,3 @@
-/* #categorybar {
-  width: 100%;
-  height: 10px;
-  text-align: left;
-  background-color: #cb7896;
-}
-#categorybar span{
-  margin-left: 10px;
-} */
 div.ui.relaxed.three.column.grid {
   position: relative;
   top: 25px;

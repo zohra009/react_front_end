@@ -17,8 +17,7 @@ class FoodPage extends Component {
   userFavFoods: [],
   clickedFood: null,
   visible: true,  //dont need this anymore
-  // radio: ''
-
+  // id: null
   }
 
   componentDidMount() {
@@ -66,6 +65,14 @@ class FoodPage extends Component {
     }
 
   }
+  //
+  // //callback
+  // setId = (id) => {
+  //   console.log(id);
+  //   this.setState({
+  //     id: id
+  //   })
+  // }
 
   render() {
     // console.log(this.state.foods)
@@ -80,11 +87,11 @@ class FoodPage extends Component {
 
 
                 <Route path="/login" component={Login } > LogIn </Route>
-                <Route exact path="/favorites" render={() => <FavoritesContainer foods={this.state.userFavFoods} removeHandler={this.removeHandler}/>} > Favorite Food Item </Route>
-                <Route exact path="/food" component={ShowPage}> Show Food Page </Route>
-                <Route path="/" render={() => <FoodListContainer visible={this.state.visible} foods={this.state.foods} backToAllFood={this.backToAllFood} switchToViewAll={this.switchToViewAll} addHandler={this.addHandler}/>} > Food List </Route>
+                <Route exact path="/favorites" render={() => <FavoritesContainer foods={this.state.userFavFoods} removeHandler={this.removeHandler} />} > Favorite Food Item </Route>
+                <Route exact path='/food'component={ShowPage}> Show Food Page </Route>
+                <Route path="/" render={() => <FoodListContainer visible={this.state.visible} foods={this.state.foods} backToAllFood={this.backToAllFood} switchToViewAll={this.switchToViewAll} addHandler={this.addHandler} />} > Food List </Route>
 
-              
+
               </Switch>
             </div>
 
@@ -99,3 +106,5 @@ class FoodPage extends Component {
 }
 
 export default FoodPage;
+
+//step:

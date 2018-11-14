@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Link } from 'react';
 import FoodItem from '../components/FoodItem'
 import "./FoodListContainer.css"
 import { Grid, Image } from 'semantic-ui-react'
@@ -10,15 +10,18 @@ class FoodListContainer extends Component {
   state = {
     selected: false,
     showFood: null,
-    foods: []
+    foods: [],
+    // currentFood: null
   }
 
   clickImageHandler = (e) => {
-    console.log(e);
+    // debugger
+    // console.log(e.id);
     this.setState({
       selected: true,
-      showFood: e
+      showFood: e,
     })
+
   }
 
   backToAllFood = () => {
@@ -47,7 +50,7 @@ class FoodListContainer extends Component {
     })
   }
   componentDidUpdate(prevProps, prevState) {
-    console.log(this.state.foods);
+    // console.log(this.state.foods);
     if(prevProps.foods !== this.props.foods){
       this.setState({foods: this.props.foods})
     }
@@ -59,12 +62,12 @@ class FoodListContainer extends Component {
 
       return <Grid.Column><FoodItem key={food.name + food.longitude + food.latitude}
         food={food} value={this.state.showFood}
-        clickHandler={this.clickImageHandler} switchToViewAll={this.props.switchToViewAll}/></Grid.Column>
+        clickHandler={this.clickImageHandler} switchToViewAll={this.props.switchToViewAll} /></Grid.Column>
     })
 
     return this.state.selected ? <ShowPage showFood={this.state.showFood}
     visible={this.props.visible} backToAllFood={this.backToAllFood}
-    addHandler={this.props.addHandler}/> : foodsArr
+    addHandler={this.props.addHandler} onClick={this.props.setId}/> : foodsArr
 
   }
 
@@ -73,7 +76,7 @@ class FoodListContainer extends Component {
     return (
 
           <div className="FoodListContainer">
-            <Filter handleRadio={this.handleRadio} sortBy={this.state.radio}/>
+             {!this.state.selected ? <Filter handleRadio={this.handleRadio} sortBy={this.state.radio}/> : null}
               <Grid relaxed columns={3}>{this.foodArray()}</Grid>
             </div>
 
