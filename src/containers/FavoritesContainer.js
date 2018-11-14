@@ -1,21 +1,58 @@
 import React from 'react'
 import FavFoodItem from '../components/FavFoodItem'
-// import Filter from './Filter'
+import Filter from './Filter'
 
-const FavoritesContainer = ({foods, removeHandler}) => {
-
-  let foodsArr = 'you have no favs'
-  console.log(foods)
-  if (foods) {
-   foodsArr = foods.map(food => <FavFoodItem key={food.name} food={food} clickHandler={removeHandler}  />)
+class FavoritesContainer extends React.Component {
+  state = {
+    favFoods: []
   }
+
+  componentWillMount(){
+    this.setState({
+      favFoods: this.props.foods
+    })
+  }
+  componentDidUpdate(prevProps, prevState) {
+    // console.log(this.state.favFoods, 'prevProps:', prevProps, 'this.props.foods:', this.props.foods);
+    if(prevProps.foods !== this.props.foods){
+      this.setState({favFoods: this.props.foods})
+    }
+  }
+
+  handleRadio = (event) => {
+    //console.log(event.target.value);
+    //event.preventDefault()
+    // console.log('im in handleRadio' ,event.target.value);
+    let newArr = [...this.state.favFoods]
+    if(event.target.value === "Categories"){
+
+     // console.log('I hit categories!');
+     let x = newArr.sort((foodA, foodB) => foodA.categories.localeCompare(foodB.categories))
+     this.setState({favFoods: x})
+   } else if (event.target.value === "Rating"){
+    let y = newArr.sort((foodA, foodB) => parseFloat(foodA.rating) - parseFloat(foodB.rating))
+    this.setState({favFoods: y})
+
+  }}
+  foodsArr = () => {
+    let foodArr = 'you have no favs'
+    //console.log(this.state.favFoods)
+    if (this.state.favFoods.length > 0) {
+      return foodArr = this.props.foods.map(food => <FavFoodItem key={food.name} food={food} clickHandler={this.props.removeHandler}  />)
+    }
+  }
+  render(){
   return (
       <div>
-
+        <Filter handleRadio={this.handleRadio} />
         Users Favorite Foods !
-        {foodsArr}
+        {this.foodsArr()}
       </div>
-  )
+  )}
 }
+
+
+
+
 
 export default FavoritesContainer;

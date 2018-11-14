@@ -1,33 +1,36 @@
 
 import { BrowserRouter as Router, Route, Switch, NavLink, Link } from 'react-router-dom';
-import { Input, Menu } from 'semantic-ui-react'
+import { Input, Menu, Button, Icon } from 'semantic-ui-react'
 import React, { Fragment, Component } from 'react';
+import './NavBar.css'
+
 
 class NavBar extends Component {
 
-  // state = { activeItem: 'home' }
-  //
-  //   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
 
     render() {
       // const { activeItem } = this.state
       console.log(this.props)
       return (
-        <header>
-          <h1>DrunkFoodz</h1>
+        <Menu inverted size="massive">
 
-              <Link to="/">Homepage|   </Link>
-              <Link to="/favorites"> Favorite Food Item|   </Link>
+          <Menu.Item active="olive" color="olive"><Link to="/" >DrunkFoodz</Link><Icon name='home' /></Menu.Item>
+          <Menu.Menu position="middle">
+
+          <Menu.Item active="teal" color="teal"><Link to="/favorites" > Favorite Food Item</Link></Menu.Item>
+          </Menu.Menu>
 
 
-
-        </header>
+        </Menu>
       )
     }
   }
 
 export default NavBar;
 
+// <Button basic color='blue' type="button"><Link to="/">Homepage</Link></Button>
+  // style={{color:"palevioletred"}}
 //Vadim's code
 // <NavLink to="/reviews">See Reviews|   </NavLink>
 // <NavLink to="/follow">Find FoodEasers</NavLink>

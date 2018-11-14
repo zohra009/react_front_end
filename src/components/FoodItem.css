@@ -1,4 +1,42 @@
 /* image class with second parameter being img tag in FoodItem components */
 .img {
-  width: 150px;
+  width: 232px;
+  height: 130px;
+
+  border: 1px solid burlywood;
 }
+.img:hover {
+    background-color: burlywood;
+    color: white;
+    box-shadow: 4px 4px 4px burlywood, 0 0 30px burlywood, 0 0 5px burlywood;
+
+}
+
+p {
+  font-size:14px;
+   font-family: "Lucida Sans Unicode", 'Lucida Grande', sans-serif;
+   text-shadow: .1px .1px 1px white, 0 0 15px burlywood, 0 0 5px burlywood;
+   position: relative;
+   top: 3px;
+   word-wrap: break-word;
+   font-weight: 900;
+   color: firebrick;
+}
+.ui.card.card {
+  background-color: tan;
+  width: 240px;
+  height: 165px;
+  position: relative;
+  border: 3px  peachpuff;
+  /* top: 80px; */
+}
+.ui.card.card:hover {
+  background-color: burlywood;
+  border: 1px  burlywood;
+  color: peachpuff;
+  box-shadow: 4px 4px 4px burlywood, 0 0 38px burlywood, 0 0 5px burlywood;
+}
+/* .column {
+  width: 210px;
+  height: 169px;
+} */

@@ -1,0 +1,21 @@
+
+a {
+    color: #cb7896;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin: 1000;
+    padding: 1000;
+    overflow: hidden;
+}
+
+li a {
+    float: left;
+    display: block;
+    width: 130px;
+    background-color: none;
+}
+li:hover {
+   background-color: mediumaquamarine;
+}

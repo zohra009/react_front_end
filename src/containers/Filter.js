@@ -1,22 +1,25 @@
 import React, { Fragment, Component } from 'react';
+import './Filter.css'
+import { Button } from 'semantic-ui-react'
 
 const Filter = ({ handleRadio }) => {
   return (
 
-    <Fragment>
-    <strong>Sort by:</strong>
-      <label>
-        <button type="button" name='name' value="Categories"  onClick={(event) => handleRadio(event)}>
+    <Fragment >
+      <div className='filter'>
+    
+      <label >
+        <Button type="button" name='name' value="Categories"  onClick={(event) => handleRadio(event)}>
         Categories
-        </button>
+      </Button>
       </label>
       <label>
-        <button type="button" name='name' value="Rating" onClick={(event) => handleRadio(event)}>
+        <Button type="button" name='name' value="Rating" onClick={(event) => handleRadio(event)}>
         Rating
-        </button>
+      </Button>
       </label>
       <br/>
-
+      </div>
 
     </Fragment>
   )
