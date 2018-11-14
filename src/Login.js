@@ -1,10 +1,11 @@
 import React from 'react'
 import './Login.css'
+import './FoodPage.css';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import { BrowserRouter as Router, Route, Switch, NavLink, Link } from 'react-router-dom';
 
 const Login = () => (
-  <div className='login' >
+
   <div className='login-form'>
     {/*
       Heads up! The styles below are necessary for the correct render of this example.
@@ -44,7 +45,6 @@ const Login = () => (
         </Message>
       </Grid.Column>
     </Grid>
-  </div>
   </div>
 )
 export default Login

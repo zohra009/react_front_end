@@ -24,12 +24,6 @@ class ShowPage extends Component {
   }
 
   render() {
-    // debugger
-
-
-    // find the matching food instance and set that to selectedFood
-
-
     console.log(this.state.showFood);
     const mapURL = `https://maps.googleapis.com/maps/api/js?key=${keys.API_KEY}&v=3.exp&libraries=geometry,drawing,places`
     return (
