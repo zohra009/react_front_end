@@ -1,6 +1,7 @@
 import React from 'react'
 import FavFoodItem from '../components/FavFoodItem'
 import Filter from './Filter'
+import './FavoritesContainer.css'
 
 class FavoritesContainer extends React.Component {
   state = {
@@ -44,9 +45,9 @@ class FavoritesContainer extends React.Component {
   }
   render(){
   return (
-      <div>
+      <div className='favCont'>
         <Filter handleRadio={this.handleRadio} />
-        Users Favorite Foods !
+        <h4>Users Favorite Foods !</h4 >
         {this.foodsArr()}
       </div>
   )}

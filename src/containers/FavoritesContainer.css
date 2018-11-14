@@ -1,0 +1,13 @@
+h4 {
+  font-size:17px;
+   font-family: "Lucida Sans Unicode", 'Lucida Grande', sans-serif;
+   text-shadow: .1px .1px 1px white, 0 0 15px burlywood, 0 0 5px burlywood;
+   position: relative;
+   top: 3px;
+   word-wrap: break-word;
+   font-weight: 900;
+   color: firebrick;
+}
+.favCont {
+  margin-bottom: 14px;
+}

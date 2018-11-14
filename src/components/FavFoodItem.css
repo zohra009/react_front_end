@@ -1,0 +1,15 @@
+.fav-img {
+  /* margin-left: -32px; */
+  margin-left: -1px;
+  width: 239px;
+  height: 130px;
+  /* margin-left: 63px; */
+  border: 1px solid burlywood;
+}
+Button {
+  margin-bottom: 34px;
+}
+
+.x {
+  text-align: left;
+}
