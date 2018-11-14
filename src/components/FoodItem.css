@@ -29,6 +29,7 @@ p {
   position: relative;
   border: 3px  peachpuff;
   margin-left: 34px;
+  margin-bottom: 34px;
   /* top: 80px; */
 }
 .ui.card.card:hover {
@@ -37,6 +38,11 @@ p {
   color: peachpuff;
   box-shadow: 4px 4px 4px burlywood, 0 0 38px burlywood, 0 0 5px burlywood;
 }
+
+.card {
+  padding-bottom: 100%;
+}
+
 /* .column {
   width: 210px;
   height: 169px;

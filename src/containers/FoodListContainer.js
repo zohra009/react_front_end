@@ -82,7 +82,10 @@ class FoodListContainer extends Component {
 
           <div className="FoodListContainer">
              <Filter handleRadio={this.handleRadio} />
-              <Grid relaxed columns={3}>{this.foodArray()}</Grid>
+              <div className="test">
+                {this.foodArray()}
+              </div>
+
             </div>
 
     );

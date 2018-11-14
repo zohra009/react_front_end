@@ -2,3 +2,9 @@ div.ui.relaxed.three.column.grid {
   position: relative;
   top: 6vh;
 }
+.test {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
