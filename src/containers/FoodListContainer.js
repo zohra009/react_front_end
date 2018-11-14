@@ -31,7 +31,7 @@ class FoodListContainer extends Component {
   // radio button
   handleRadio = (event) => {
     // console.log(event.target.value);
-    // event.preventDefault()
+    event.preventDefault()
     // console.log('im in handleRadio' ,event.target.value);
     let newArr = [...this.state.foods]
     if(event.target.value === "Categories"){
@@ -60,7 +60,7 @@ class FoodListContainer extends Component {
   foodArray = () => {
     const foodsArr = this.state.foods.map(food => {
 
-      return <Grid.Column><FoodItem key={food.name + food.longitude + food.latitude}
+      return <Grid.Column><FoodItem key={food.id}
         food={food} value={this.state.showFood}
         clickHandler={this.clickImageHandler} switchToViewAll={this.props.switchToViewAll} /></Grid.Column>
     })
@@ -71,12 +71,13 @@ class FoodListContainer extends Component {
 
   }
 
+// {!this.state.selected ? <Filter handleRadio={this.handleRadio} sortBy={this.state.radio}/> : null}
   render() {
 
     return (
 
           <div className="FoodListContainer">
-             {!this.state.selected ? <Filter handleRadio={this.handleRadio} sortBy={this.state.radio}/> : null}
+             <Filter handleRadio={this.handleRadio} />
               <Grid relaxed columns={3}>{this.foodArray()}</Grid>
             </div>
 

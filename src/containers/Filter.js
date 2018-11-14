@@ -1,11 +1,12 @@
 import React, { Fragment, Component } from 'react';
-
+import './Filter.css'
 const Filter = ({ handleRadio }) => {
   return (
 
-    <Fragment>
+    <Fragment >
+      <div className='filter'>
     <strong>Sort by:</strong>
-      <label>
+      <label >
         <button type="button" name='name' value="Categories"  onClick={(event) => handleRadio(event)}>
         Categories
         </button>
@@ -16,7 +17,7 @@ const Filter = ({ handleRadio }) => {
         </button>
       </label>
       <br/>
-
+      </div>
 
     </Fragment>
   )

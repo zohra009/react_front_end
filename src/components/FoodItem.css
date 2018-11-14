@@ -26,7 +26,7 @@ p {
   width: 210px;
   height: 169px;
   position: relative;
-  top: 30px;
+  /* top: 80px; */
 }
 .ui.card.card:hover {
   background-color: yellow;
@@ -34,3 +34,7 @@ p {
   color: brown;
   box-shadow: 4px 4px 4px black, 0 0 38px midnightblue, 0 0 5px mediumaquamarine;
 }
+/* .column {
+  width: 210px;
+  height: 169px;
+} */
