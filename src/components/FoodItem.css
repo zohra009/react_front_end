@@ -13,7 +13,7 @@
 }
 
 p {
-  font-size:14px;
+  font-size:15px;
    font-family: "Lucida Sans Unicode", 'Lucida Grande', sans-serif;
    text-shadow: .1px .1px 1px white, 0 0 15px burlywood, 0 0 5px burlywood;
    position: relative;
@@ -23,7 +23,7 @@ p {
    color: firebrick;
 }
 .ui.card.card {
-  background-color: tan;
+  background-color: darksalmon;
   width: 240px;
   height: 165px;
   position: relative;
