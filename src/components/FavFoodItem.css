@@ -1,6 +1,6 @@
 .fav-img {
   /* margin-left: -32px; */
-  margin-left: -1px;
+  margin-left: 19px;
   width: 239px;
   height: 130px;
   /* margin-left: 63px; */
@@ -8,8 +8,18 @@
 }
 Button {
   margin-bottom: 34px;
-}
 
+}
+h4 {
+  margin-left: 15px;
+}
+.fav {
+  margin-left: -5px;
+}
 .x {
   text-align: left;
+  margin-left: 18px;
+}
+#del {
+  margin-left: 18px;
 }

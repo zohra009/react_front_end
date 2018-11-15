@@ -11,7 +11,7 @@ const FavFoodItem = ({food, clickHandler}) => {
 
     <img className="fav-img" src={food.image_url} />
     <p className='x'>Restaurant Name: {food.name}</p>
-    <Button onClick={() => clickHandler(food)}>Remove Food Item</Button>
+    <Button id='del' onClick={() => clickHandler(food)}>Remove Food Item</Button>
 
     </div>
 
