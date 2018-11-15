@@ -1,5 +1,14 @@
-.login {
+/* .login {
   background-image: url("https://i.pinimg.com/originals/10/ff/38/10ff38e1fb344dec9d4bafc6c45e88f4.gif");
-  /* position: relative;
-  top: 0; */
+  position: relative;
+  top: 0;
+} */
+.ui.message {
+  background-color: lightgoldenrodyellow;
+}
+.ui.stacked.segment {
+  background-color: lightgoldenrodyellow;
+}
+.ui.teal.large.fluid.button {
+  background-color: powderblue;
 }

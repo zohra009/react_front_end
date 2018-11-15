@@ -53,8 +53,8 @@ class ShowPage extends Component {
       <p>Price: {this.state.showFood.price}</p>
       <p>Location: {this.state.showFood.location}</p>
       <p>Tel: {this.state.showFood.phone}</p>
-      <Modal style={{width: 300}} trigger={<Button onClick={() => this.toggle()}> Add to Favorites</Button>}>
-        <Modal.Content style={{"background-color": "aquamarine"}}>
+      <Modal style={{width: 360}} trigger={<Button onClick={() => this.toggle()}> Add to Favorites</Button>}>
+        <Modal.Content style={{"background-color": "peachpuff"}}>
 
           <p>Added to Your Favorites!</p>
 
