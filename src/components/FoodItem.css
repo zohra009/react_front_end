@@ -2,7 +2,7 @@
 .img {
   width: 239px;
   height: 130px;
-  /* margin-left: 63px; */
+  
   border: 1px solid burlywood;
 }
 .img:hover {
@@ -30,7 +30,7 @@ p {
   border: 3px  peachpuff;
   margin-left: 34px;
   margin-bottom: 34px;
-  /* top: 80px; */
+
 }
 .ui.card.card:hover {
   background-color: burlywood;
@@ -42,8 +42,3 @@ p {
 .card {
   padding-bottom: 100%;
 }
-
-/* .column {
-  width: 210px;
-  height: 169px;
-} */
