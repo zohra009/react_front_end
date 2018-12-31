@@ -63,6 +63,7 @@ class ShowPage extends Component {
       </Modal>
 
       <div className="map">
+        
         <MyGoogleMap
            isMarkerShown
            googleMapURL= {mapURL}
